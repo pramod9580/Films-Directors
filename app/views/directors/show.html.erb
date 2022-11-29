@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @director.name %>
+</p>
+
+<% @director.movies.each do |dir| %><br>
+Name of movie:<%= dir.name %><br>
+Movie Genre:<%= dir.genre%><br>
+<% end %>
+
+<%= link_to 'Edit', edit_director_path(@director) %> |
+<%= link_to 'Back', directors_path %>
